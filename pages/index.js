@@ -1,82 +1,50 @@
-import Head from 'next/head'
+import Layout from "../components/Layout";
+import Head from "next/head";
+import Tilt from "react-vanilla-tilt";
+import Navbar from "../components/Navbar";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const res = await fetch(process.env.NEXT_PUBLIC_APIURL + "kategori");
+  const kategori = await res.json();
+
+  return {
+    props: {
+      kategori,
+    },
+  };
+}
+
+export default function Home({ kategori }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Layout kategori={kategori} index>
+      <Navbar kategori={kategori} index />
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Beranda &bull; Session" />
+        <meta property="og:description" content="Website Kelas dan juga Web Blog Session Generasi Ke 6 Jurusan Rekayasa Perangkat Lunak SMKN 1 Ciamis" />
+        <meta property="og:image" content={process.env.NEXT_PUBLIC_APIURL + "gambar/session.png"} />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="webcrawlers" content="all" />
+        <meta property="spiders" content="all" />
+        <meta property="robots" content="all" />
+        <meta name="keywords" content="blog, web blog, artikel, website kelas, sesion class smkn 1 ciamis, session, smkn 1 ciamis, smk negeri 1 ciamis, website kelas keren" />
+        <title>Beranda &bull; Session</title>
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="container mx-auto text-white items-center py-56 md:py-44 hover:cursor-pointer">
+        <div className="index-sesion 6/12 mx-auto flex items-center flex-col">
+          <Tilt className="index-tilt">
+            <div className="text-center flex items-center justify-center">
+              <h1 id="typing" className="md:text-4xl text-xl text-white font-bold flex">
+                We Are.....
+              </h1>
+              <div id="line">|</div>
+            </div>
+            <h1 className="md:text-8xl text-4xl uppercase justify-center text-center font-bold text-blue-500 animation">
+              Session <span className="text-yellow-600 animation">Class</span>
+            </h1>
+          </Tilt>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
+      </div>
+    </Layout>
+  );
 }

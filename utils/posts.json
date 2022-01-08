@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "thumbnail": "/assets/thumbnail/thumbnail-2.png",
+    "category": "INTERNET",
+    "date": "June 28, 2021",
+    "title": "How to design a product that can grow itself 10x in year",
+    "deskripsi": "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.",
+    "authorAvatar": "assets/author/author-2.png",
+    "authorNama": "Jenny Wilson",
+    "authorJob": "Product Designer"
+  },
+  {
+    "id": "2",
+    "thumbnail": "/assets/thumbnail/thumbnail-3.png",
+    "category": "9 to 5",
+    "date": "June 22, 2021",
+    "title": "The More Important the Work, the More Important the Rest",
+    "deskripsi": "Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high.",
+    "authorAvatar": "assets/author/author-3.png",
+    "authorNama": "Esther Howard",
+    "authorJob": "Entrepreneur"
+  },
+  {
+    "id": "3",
+    "thumbnail": "/assets/thumbnail/thumbnail-4.png",
+    "category": "Inspiration",
+    "date": "June 28, 2021",
+    "title": "Email Love - Email Inspiration, Templates and Discovery",
+    "deskripsi": "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.",
+    "authorAvatar": "assets/author/author-4.png",
+    "authorNama": "Robert Fox",
+    "authorJob": "Front-end Engineer"
+  },
+  {
+    "id": "4",
+    "thumbnail": "/assets/thumbnail/thumbnail-2.png",
+    "category": "INTERNET",
+    "date": "June 28, 2021",
+    "title": "How to design a product that can grow itself 10x in year",
+    "deskripsi": "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.",
+    "authorAvatar": "assets/author/author-2.png",
+    "authorNama": "Jenny Wilson",
+    "authorJob": "Product Designer"
+  },
+  {
+    "id": "5",
+    "thumbnail": "/assets/thumbnail/thumbnail-2.png",
+    "category": "INTERNET",
+    "date": "June 28, 2021",
+    "title": "How to design a product that can grow itself 10x in year",
+    "deskripsi": "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.",
+    "authorAvatar": "assets/author/author-2.png",
+    "authorNama": "Jenny Wilson",
+    "authorJob": "Product Designer"
+  },
+  {
+    "id": "6",
+    "thumbnail": "/assets/thumbnail/thumbnail-2.png",
+    "category": "INTERNET",
+    "date": "June 28, 2021",
+    "title": "How to design a product that can grow itself 10x in year",
+    "deskripsi": "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.",
+    "authorAvatar": "assets/author/author-2.png",
+    "authorNama": "Jenny Wilson",
+    "authorJob": "Product Designer"
+  }
+]
